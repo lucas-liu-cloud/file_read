@@ -1,0 +1,6 @@
+print(" 下面是read()方法的使用，“r”表示read")
+f1 = open("kiki.txt","r")
+line = f1.read()
+s = line[:]
+print("查询到的数据为：",s)
+f1.close()
