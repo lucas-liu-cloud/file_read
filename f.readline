@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+#-*- coding: utf-8-*-
+# @Time   : 2021/06/16 3:50
+
+import datetime
+
+print(" 下面是readline()方法的使用，“r”表示read")
+f2 = open("kiki.txt","r")
+line2 = f2.readline()
+while line2 != "":
+      s = line2[2:4]
+      print("查询到的数据为：",s)
+      line2 = f2.readline()
+f2.close()
