@@ -1,0 +1,70 @@
+#!/usr/bin/python3
+
+# -------------coding:uft8------------
+
+db = open ("lucas.txt","w+")
+
+num = db.write("asdfasasdfasdfa\n")
+
+print("文件字符数为：",num)
+print("文件名为：",db.name)
+
+db.flush()
+
+
+db.close()
+print("********************************")
+db = open("lucas.txt","r")
+s = db.read()
+
+a = db.fileno()
+
+b = db.isatty()
+
+print("文件内容为：",s)
+
+print("文件描述符为：",a)
+
+print("是否链接到tty终端：",b)
+db.close()
+
+print("********************************")
+
+fo = open("kiki.txt","r")
+#fo.write("这是第一行!!! \n这是第二行!!! \n")
+
+#c = fo.read()
+
+print("文件名字为：",fo.name)
+#print("文件的内容为：",c)
+for index in range (0,5):
+    line = next(fo)
+    print ("第%d 行 - %s" %(index, line))
+fo.close()
+
+print("********************************")
+
+fo = open("kiki.txt","r")
+print("文件名字为：",fo.name)
+
+#for line in fo.readlines():
+line = fo.readline()
+while line != "":
+    s = line[0:4]
+    print (s)
+    line = fo.readline() 
+fo.close()
+
+
+print("********************************")
+
+fo = open("kiki.txt","r")
+print("文件名字为：",fo.name)
+
+#for line in fo.readlines():
+line = fo.readline()
+while line != "":
+    s = line[2:4]
+    print (s)
+    line = fo.readline() 
+fo.close()
