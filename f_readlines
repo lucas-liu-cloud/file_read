@@ -14,3 +14,17 @@ for s in line3:
 #   print("查询到的数据为：",s[0])
     print("查询到的数据为：",s[2:4])
 #   print("查询到的数据为：",s[2])
+
+
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+# coding=utf-8
+
+f = open("123.txt",'r')
+
+content = f.read(10)
+while len(content) > 0:
+   print(content)
+   content = f.read(10)
+
+#按自定义字符长度读取，针对大文件操作，防止内存溢出
