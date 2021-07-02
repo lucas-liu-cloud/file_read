@@ -10,3 +10,18 @@ line = f1.read()
 s = line[:]
 print("查询到的数据为：",s)
 f1.close()
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－
+f = open("tt.txt","r")
+
+cont = f.read(5)
+
+print("第一次读取：",cont)
+
+cont1 = f.read(5)
+
+print("第二次读取：",cont1)
+－－－－－－－－－－－－－－－－－－－－－－－－－－
+python3 tt.py 
+第一次读取： abcde
+第二次读取： fghjk
